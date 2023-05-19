@@ -59,13 +59,21 @@ function goToSlide(index) {
 }
 
 arrowLeft.addEventListener('click', () => {
-  const prevSlideIndex = currentSlideIndex - 1;
-  goToSlide(prevSlideIndex);
+ const prevSlideIndex = currentSlideIndex - 1;
+  if (prevSlideIndex < 0) {
+    goToSlide(slides.length - 1);
+  } else {
+    goToSlide(prevSlideIndex);
+  }
 });
 
 arrowRight.addEventListener('click', () => {
   const nextSlideIndex = currentSlideIndex + 1;
-  goToSlide(nextSlideIndex);
+  if (nextSlideIndex >= slides.length) {
+    goToSlide(0);
+  } else {
+    goToSlide(nextSlideIndex);
+  }
 });
 
 slides.forEach((slide, index) => {

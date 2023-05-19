@@ -38,6 +38,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	margin:auto;
+	max-width:1440px;
 }
 ol, ul {
 	list-style: none;
@@ -52,9 +54,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-body {
-
 }
 section {
 	margin-block: 6em;

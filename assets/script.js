@@ -87,7 +87,7 @@ arrowRight.addEventListener("click", () => {
 });
 
 // Crée un point de repère (dot) pour chaque slide
-slides.forEach((slide, index) => {
+slides.forEach((index) => {
   createDotPoint(index);
 });
 
